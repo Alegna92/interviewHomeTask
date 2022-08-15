@@ -1,6 +1,22 @@
 import java.math.BigInteger;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
 public class ReverseAndAdd {
+
+    public static void main(String[] args) throws Exception {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter numbers to calculate");
+        scanner.useDelimiter(System.lineSeparator() + "|\n");
+        List<Long> inputNumbers = new ArrayList<>();
+        while (scanner.hasNextLong()) {
+            inputNumbers.add(scanner.nextLong());
+        }
+        for (Long inputNumber : inputNumbers) {
+            System.out.println(tryToFindPalindrome(inputNumber));
+        }
+    }
 
     public static String tryToFindPalindrome(long number) throws Exception {
         if (number < 0) {

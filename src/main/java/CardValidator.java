@@ -1,4 +1,12 @@
+import java.util.Scanner;
+
 public class CardValidator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter potential credit card number");
+        String cardNumberToValidate = scanner.nextLine();
+        System.out.println(validateCardNumber(cardNumberToValidate));
+    }
 
     private static String removeUnnecessaryCharacters(String cardNumberToValidate) {
         return cardNumberToValidate.replace("-", "").replace(" ", "");
