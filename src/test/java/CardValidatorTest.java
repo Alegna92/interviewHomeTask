@@ -19,7 +19,7 @@ class CardValidatorTest {
 
     @Test
     void shouldReturnFalseWhenValidCardNumberWithInvalidCharacters() {
-        String cardNumberToValidate = "4354735186402!@#"; //change example card number to valid one, and add invalid character
+        String cardNumberToValidate = "4354735186402!@#";
         assertFalse(CardValidator.validateCardNumber(cardNumberToValidate));
     }
 
@@ -42,7 +42,7 @@ class CardValidatorTest {
     }
 
     @Test
-    void shouldReturnTrueWhenValidCardNumberWithLegalAdditionalCharacters() { //is card number valid without legal additional characters?
+    void shouldReturnTrueWhenValidCardNumberWithLegalAdditionalCharacters() {
         String cardNumberToValidate = "6759-6498 2643- 8453";
         assertTrue(CardValidator.validateCardNumber(cardNumberToValidate));
     }
